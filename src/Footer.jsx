@@ -12,7 +12,7 @@ const SCFooter = styled.div `
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 375px;
+    width: 100%;
     height: 70px;
     background: #FFFFFF;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);

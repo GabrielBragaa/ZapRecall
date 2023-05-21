@@ -16,13 +16,15 @@ const cards = [
 ]
 
 export default function App() {
+  const [points, setPoints] = useState(0);
+  
   return (
     <SCApp>
       <SCHeader>  
         <img src={logo}></img>
         <p>ZapRecall</p>
       </SCHeader>
-      <Deck cards={cards}/>
+      <Deck cards={cards} points={points} setPoints={setPoints}/>
       <Footer/>
     </SCApp>
   )
@@ -32,6 +34,7 @@ const SCApp = styled.div `
   display: flex;
   flex-direction: column;
   background-color: #FB6B6B;
+  margin-bottom: 70px;
 `
 
 const SCHeader = styled.div `
