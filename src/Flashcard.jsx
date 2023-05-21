@@ -17,16 +17,19 @@ function response(r) {
         setFinalColor('#FF3030');
         setTela('screen4');
         setFinalIcon(erro);
+        setDone(done + 1);
 
     } else if (r === 'almost') {
         setFinalColor('#FF922E');
         setPoints(points + 1);
+        setDone(done + 1);
         setTela('screen4');
         setFinalIcon(quase)
 
     } else if (r === 'right') {
         setFinalColor('#2FBE34');
         setPoints(points + 1);
+        setDone(done + 1);
         setTela('screen4');
         setFinalIcon(certo)
     }

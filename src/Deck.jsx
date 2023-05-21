@@ -4,12 +4,12 @@ import { useState } from 'react';
 import Flashcard from './Flashcard';
 
 export default function Deck(props) {
-    const {cards, points, setPoints} = props;
-    let [done, setDone] = useState([]);
+    const {cards, done, setDone, points, setPoints} = props;
     return (
        cards.map((card, index) =>
         <SCul key={index + 1}>
-            <Flashcard key={card.question} question={card.question} answer={card.answer} id={index} points={points} setPoints={setPoints}/>
+            <Flashcard key={card.question} question={card.question} answer={card.answer} 
+            id={index} points={points} setPoints={setPoints} done={done} setDone={setDone}/>
         </SCul>)
     )
 }

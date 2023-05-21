@@ -17,15 +17,15 @@ const cards = [
 
 export default function App() {
   const [points, setPoints] = useState(0);
-  
+  let [done, setDone] = useState(0);
   return (
     <SCApp>
       <SCHeader>  
         <img src={logo}></img>
         <p>ZapRecall</p>
       </SCHeader>
-      <Deck cards={cards} points={points} setPoints={setPoints}/>
-      <Footer/>
+      <Deck cards={cards} points={points} setPoints={setPoints} done={done} setDone={setDone}/>
+      <Footer done={done} cards={cards}/>
     </SCApp>
   )
 }

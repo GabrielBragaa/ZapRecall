@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
-export default function Footer() {
+export default function Footer(props) {
+   const {cards, done} = props;
     return (
         <SCFooter>
-            <p>0/8 CONCLUÍDOS</p>
+            <p>{done}/{cards.length} CONCLUÍDOS</p>
         </SCFooter>
     )
 }
