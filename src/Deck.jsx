@@ -15,6 +15,7 @@ export default function Deck(props) {
 const SCul = styled.ul `
     list-style-type: none;
     display: flex;
+
 `
 
 const SCli = styled.li `
@@ -25,6 +26,16 @@ const SCli = styled.li `
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    font-family: 'Recursive', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+
+color: #333333;
     img {
         width: 20px;
         height: 23px;

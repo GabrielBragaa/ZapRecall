@@ -32,12 +32,13 @@ const SCApp = styled.div `
   display: flex;
   flex-direction: column;
   background-color: #FB6B6B;
-  align-items: center;
 `
 
 const SCHeader = styled.div `
   display: flex;
   align-items: center;
+  justify-content: center;
+  margin-left: 40px;
   img {
     width: 52px;
     height: 60px;
