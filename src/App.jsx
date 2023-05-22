@@ -20,6 +20,8 @@ export default function App() {
   let [answersIcons, setAnswersIcons] = useState([]);
   let [done, setDone] = useState(0);
   let [start, setStart] = useState(false);
+  let [points, setPoints] = useState(0);
+
   return (
     <>
       {!start && (
@@ -31,8 +33,8 @@ export default function App() {
           <img src={logo}></img>
           <p>ZapRecall</p>
         </SCHeader>
-        <Deck cards={cards} done={done} setDone={setDone} answersIcons={answersIcons} setAnswersIcons={setAnswersIcons}/>
-        <Footer done={done} cards={cards} answersIcons={answersIcons}/>
+        <Deck cards={cards} done={done} setDone={setDone} answersIcons={answersIcons} setAnswersIcons={setAnswersIcons} points={points} setPoints={setPoints}/>
+        <Footer done={done} cards={cards} answersIcons={answersIcons} points={points}/>
       </SCApp>
       )}
     </>

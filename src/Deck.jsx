@@ -3,12 +3,13 @@ import { useState } from 'react';
 import Flashcard from './Flashcard';
 
 export default function Deck(props) {
-    let {cards, done, setDone, answersIcons, setAnswersIcons} = props;
+    let {cards, done, setDone, answersIcons, setAnswersIcons, points, setPoints} = props;
     return (
        cards.map((card, index) =>
         <SCul key={index + 1}>
             <Flashcard key={card.question} question={card.question} answer={card.answer} 
-            id={index} done={done} setDone={setDone} answersIcons={answersIcons} setAnswersIcons={setAnswersIcons}/>
+            id={index} done={done} setDone={setDone} answersIcons={answersIcons} 
+            setAnswersIcons={setAnswersIcons} points={points} setPoints={setPoints}/>
         </SCul>)
     )
 }

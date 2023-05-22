@@ -7,7 +7,7 @@ import quase from './assets/icone_quase.png'
 import certo from './assets/icone_certo.png'
 
 export default function Flashcard(props) {
-    let {question, answer, id, done, setDone, answersIcons, setAnswersIcons} = props;
+    let {question, answer, id, done, setDone, answersIcons, setAnswersIcons, points, setPoints} = props;
     let [tela, setTela] = useState('screen1');
     let [finalColor, setFinalColor] = useState('');
     let [finalIcon, setFinalIcon] = useState('');
@@ -21,7 +21,7 @@ function response(r) {
         setFinalIcon(erro);
         setDone(done + 1);
         setDataTest('no-icon');
-
+        
     } else if (r === 'almost') {
         setFinalColor('#FF922E');
         setDone(done + 1);
@@ -29,6 +29,7 @@ function response(r) {
         setTela('screen4');
         setFinalIcon(quase);
         setDataTest('partial-icon');
+        setPoints(points + 1);
 
     } else if (r === 'right') {
         setFinalColor('#2FBE34');
@@ -37,6 +38,7 @@ function response(r) {
         setTela('screen4');
         setFinalIcon(certo);
         setDataTest('zap-icon');
+        setPoints(points + 1);
     }
 }
 
@@ -122,14 +124,14 @@ const SCPergunta = styled.li `
 `
 const SCResposta = styled.li `
     width: 300px;
-    height: 131px;
+    min-height: 131px;
     background: #FFFFD5;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 15px 15px 10px 15px;
+    padding: 0 15px 10px 10px;
     box-sizing: border-box;
     font-family: 'Recursive', sans-serif;
     font-style: normal;
@@ -137,6 +139,7 @@ const SCResposta = styled.li `
     font-size: 18px;
     line-height: 22px;
     color: #333333;
+    
 `
 const SCContainerButton = styled.div `
     display: flex;
