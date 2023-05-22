@@ -16,7 +16,7 @@ const cards = [
 ]
 
 export default function App() {
-  const [points, setPoints] = useState(0);
+  let [answersIcons, setAnswersIcons] = useState([]);
   let [done, setDone] = useState(0);
   return (
     <SCApp>
@@ -24,8 +24,8 @@ export default function App() {
         <img src={logo}></img>
         <p>ZapRecall</p>
       </SCHeader>
-      <Deck cards={cards} points={points} setPoints={setPoints} done={done} setDone={setDone}/>
-      <Footer done={done} cards={cards}/>
+      <Deck cards={cards} done={done} setDone={setDone} answersIcons={answersIcons} setAnswersIcons={setAnswersIcons}/>
+      <Footer done={done} cards={cards} answersIcons={answersIcons}/>
     </SCApp>
   )
 }

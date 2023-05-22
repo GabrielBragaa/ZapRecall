@@ -7,29 +7,30 @@ import quase from './assets/icone_quase.png'
 import certo from './assets/icone_certo.png'
 
 export default function Flashcard(props) {
-    let {question, answer, id, points, setPoints, done, setDone} = props;
+    let {question, answer, id, done, setDone, answersIcons, setAnswersIcons} = props;
     let [tela, setTela] = useState('screen1');
     let [finalColor, setFinalColor] = useState('');
     let [finalIcon, setFinalIcon] = useState('');
-
+    console.log(answersIcons)
 function response(r) {
     if(r === 'wrong') {
         setFinalColor('#FF3030');
         setTela('screen4');
+        setAnswersIcons([...answersIcons, erro]);
         setFinalIcon(erro);
         setDone(done + 1);
 
     } else if (r === 'almost') {
         setFinalColor('#FF922E');
-        setPoints(points + 1);
         setDone(done + 1);
+        setAnswersIcons([...answersIcons, quase])
         setTela('screen4');
         setFinalIcon(quase)
 
     } else if (r === 'right') {
         setFinalColor('#2FBE34');
-        setPoints(points + 1);
         setDone(done + 1);
+        setAnswersIcons([...answersIcons, certo])
         setTela('screen4');
         setFinalIcon(certo)
     }
