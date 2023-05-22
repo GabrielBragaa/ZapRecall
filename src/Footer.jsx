@@ -6,7 +6,7 @@ import certo from './assets/icone_certo.png'
 export default function Footer(props) {
    const {cards, done, answersIcons} = props;
     return (
-        <SCFooter>
+        <SCFooter data-test="footer">
             <p>{done}/{cards.length} CONCLUÍDOS</p>
             <SCIcons>
                 {cards.map((card, i) => <img src={answersIcons[i]} key={i}></img>)}
