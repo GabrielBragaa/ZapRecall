@@ -1,9 +1,11 @@
-import { useState } from 'react'
-import Deck from '../Deck'
-import Footer from '../Footer/Footer'
-import logo from '../assets/logo.png'
-import { SCApp, SCHeader } from './StylesApp'
-import Welcome from '../Welcome'
+import { useState } from 'react';
+import Deck from '../Deck';
+import Footer from '../Footer/Footer';
+import logo from '../assets/logo.png';
+import { SCApp, SCHeader } from './StylesApp';
+import Welcome from '../Welcome';
+import { createGlobalStyle } from 'styled-components';
+import { GlobalStyle } from './StylesApp';
 
 const cards = [
 	{ question: "O que é JSX?", answer: "Uma extensão da linguagem JavaScript" },
@@ -24,6 +26,7 @@ export default function App() {
 
   return (
     <>
+      <GlobalStyle/>
       {!start && (
           <Welcome start={start} setStart={setStart}/>
       )}

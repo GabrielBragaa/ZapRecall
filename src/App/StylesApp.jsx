@@ -1,17 +1,17 @@
 import styled from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
 export const SCApp = styled.div `
   display: flex;
   flex-direction: column;
-  background-color: #FB6B6B;
-  margin-bottom: 70px;
+  margin: 0 auto 70px auto;
 `
 
 export const SCHeader = styled.div `
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 40px;
+  margin: 0 auto;
   img {
     width: 52px;
     height: 60px;
@@ -31,5 +31,13 @@ export const SCHeader = styled.div `
     letter-spacing: -0.012em;
     color: #FFFFFF;
     transform: rotate(0.58deg);
+  }
+`
+export const GlobalStyle = createGlobalStyle`
+  body{
+    background-color:#FB6B6B;
+  }
+  * {
+    box-sizing: border-box;
   }
 `
