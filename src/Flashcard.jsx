@@ -21,7 +21,7 @@ function response(r) {
         setFinalIcon(erro);
         setDone(done + 1);
         setDataTest('no-icon');
-        
+
     } else if (r === 'almost') {
         setFinalColor('#FF922E');
         setDone(done + 1);
@@ -147,7 +147,7 @@ const SCContainerButton = styled.div `
 `
 const SCButtonRed = styled.button `
         width: 85px;
-        height: 37px;
+        min-height: 37px;
         border-radius: 5px;
         border: none;
         background-color: #FF3030;
@@ -161,7 +161,7 @@ const SCButtonRed = styled.button `
 `
 const SCButtonYellow = styled.button `
         width: 85px;
-        height: 37px;
+        min-height: 37px;
         border-radius: 5px;
         border: none;
         background-color: #FF922E;
@@ -175,7 +175,7 @@ const SCButtonYellow = styled.button `
 `
 const SCButtonGreen = styled.button `
         width: 85px;
-        height: 37px;
+        min-height: 37px;
         border-radius: 5px;
         border: none;
         background-color: #2FBE34;
