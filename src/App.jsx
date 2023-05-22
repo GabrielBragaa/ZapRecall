@@ -3,6 +3,7 @@ import Deck from './Deck'
 import Footer from './Footer'
 import logo from './assets/logo.png'
 import styled from 'styled-components'
+import Welcome from './Welcome'
 
 const cards = [
 	{ question: "O que é JSX?", answer: "Uma extensão da linguagem JavaScript" },
@@ -18,15 +19,23 @@ const cards = [
 export default function App() {
   let [answersIcons, setAnswersIcons] = useState([]);
   let [done, setDone] = useState(0);
+  let [start, setStart] = useState(false);
   return (
-    <SCApp>
-      <SCHeader>  
-        <img src={logo}></img>
-        <p>ZapRecall</p>
-      </SCHeader>
-      <Deck cards={cards} done={done} setDone={setDone} answersIcons={answersIcons} setAnswersIcons={setAnswersIcons}/>
-      <Footer done={done} cards={cards} answersIcons={answersIcons}/>
-    </SCApp>
+    <>
+      {!start && (
+          <Welcome start={start} setStart={setStart}/>
+      )}
+      {start && (
+      <SCApp>
+        <SCHeader>  
+          <img src={logo}></img>
+          <p>ZapRecall</p>
+        </SCHeader>
+        <Deck cards={cards} done={done} setDone={setDone} answersIcons={answersIcons} setAnswersIcons={setAnswersIcons}/>
+        <Footer done={done} cards={cards} answersIcons={answersIcons}/>
+      </SCApp>
+      )}
+    </>
   )
 }
 
