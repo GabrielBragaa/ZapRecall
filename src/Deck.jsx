@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import Flashcard from './Flashcard';
+import styled from 'styled-components';
+import Flashcard from './Flashcard/Flashcard';
 
 export default function Deck(props) {
     let {cards, done, setDone, answersIcons, setAnswersIcons, points, setPoints} = props;
